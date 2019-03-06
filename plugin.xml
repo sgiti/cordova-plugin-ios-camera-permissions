@@ -28,5 +28,11 @@
             <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
                 <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
             </config-file>
+            
+            <config-file target="*-Info.plist" parent="CFBundleLocalizations">
+                <array>
+                    <string>fr</string>
+                </array>
+            </config-file>
         </platform>
     </plugin>
