@@ -35,7 +35,7 @@
                 </array>
             </config-file>
             
-            <config-file platform="ios" parent="LSApplicationQueriesSchemes" overwrite="true">
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" overwrite="true">
                 <array>
                     <string>com.medicallconcept.entractes</string>
                     <string>commedicallconceptentractes</string>
