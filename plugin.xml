@@ -9,6 +9,14 @@
         <engine name="cordova" version=">=3.0.0"/>
         </engines>
         <platform name="ios">
+            <preference name="LOCATION_USAGE_DESCRIPTION" default="This app needs location access"/>
+            <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+                <string>$LOCATION_USAGE_DESCRIPTION</string>
+            </config-file>
+            <edit-config target="NSLocationWhenInUseUsageDescription" file="*-Info.plist" mode="merge">
+                <string>need location access to find things nearby</string>
+            </edit-config>
+
             <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
             <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
                 <string>$CAMERA_USAGE_DESCRIPTION</string>
