@@ -9,7 +9,7 @@
         <engine name="cordova" version=">=3.0.0"/>
         </engines>
         <platform name="ios">
-            <preference name="LOCATION_USAGE_DESCRIPTION" default="Autoriser Kairos Santé à vous géolocaliser ?"/>
+            <preference name="LOCATION_USAGE_DESCRIPTION" default="La localisation est utilisée pour afficher les pharmacies proche de vous. Votre emplacement ne sera pas enregistré."/>
             <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
                 <string>$LOCATION_USAGE_DESCRIPTION</string>
             </config-file>
