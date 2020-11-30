@@ -40,6 +40,16 @@
                 <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
             </config-file>
             
+
+
+            <preference name="HEALTHKIT_USAGE_DESCRIPTION" default="This app needs read/write-access to health kit."/>
+            <config-file target="*-Info.plist" parent="NSHealthShareUsageDescription">
+                <string>$HEALTHKIT_USAGE_DESCRIPTION</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="NSHealthUpdateUsageDescription" default="This app needs read/write-access to health kit.">
+                <string>$HEALTHKIT_USAGE_DESCRIPTION</string>
+            </config-file>
             
             
             <config-file target="*-Info.plist" parent="CFBundleLocalizations">
