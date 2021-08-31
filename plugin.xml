@@ -9,6 +9,17 @@
         <engine name="cordova" version=">=3.0.0"/>
         </engines>
         <platform name="ios">
+            <preference name="LOCATION_USAGE_DESCRIPTION" default="La localisation est utilisée pour afficher les pharmacies proche de vous. Votre emplacement ne sera pas enregistré."/>
+            <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
+                <string>$LOCATION_USAGE_DESCRIPTION</string>
+            </config-file>
+            <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
+                <string>$LOCATION_USAGE_DESCRIPTION</string>
+            </config-file>
+            <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
+                <string>$LOCATION_USAGE_DESCRIPTION</string>
+            </config-file>
+
             <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
             <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
                 <string>$CAMERA_USAGE_DESCRIPTION</string>
@@ -19,7 +30,7 @@
                 <string>$MICROPHONE_USAGE_DESCRIPTION</string>
             </config-file>
 
-            <preference name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" default="This app needs write-access to photo library"/>
+            <preference name="PHOTOLIBRARY_ADD_USAGE_DESCRIPTION" default="This app needs read/write-access photo library access"/>
             <config-file target="*-Info.plist" parent="NSPhotoLibraryAddUsageDescription">
                 <string>$PHOTOLIBRARY_ADD_USAGE_DESCRIPTION</string>
             </config-file>
@@ -28,5 +39,34 @@
             <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
                 <string>$PHOTOLIBRARY_USAGE_DESCRIPTION</string>
             </config-file>
+            
+
+
+            <preference name="HEALTHKIT_USAGE_DESCRIPTION" default="This app needs read/write-access to health kit."/>
+            <config-file target="*-Info.plist" parent="NSHealthShareUsageDescription">
+                <string>$HEALTHKIT_USAGE_DESCRIPTION</string>
+            </config-file>
+
+            <config-file target="*-Info.plist" parent="NSHealthUpdateUsageDescription" default="This app needs read/write-access to health kit.">
+                <string>$HEALTHKIT_USAGE_DESCRIPTION</string>
+            </config-file>
+            
+            
+            <config-file target="*-Info.plist" parent="CFBundleLocalizations">
+                <array>
+                    <string>fr</string>
+                </array>
+            </config-file>
+            
+            <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes" overwrite="true">
+                <array>
+                    <string>com.medicallconcept.entractes</string>
+                    <string>commedicallconceptentractes</string>
+                    <string>fb</string>
+                    <string>comgooglemaps</string>
+                    <string>com.google.maps</string>
+                </array>
+            </config-file>
+            
         </platform>
     </plugin>
